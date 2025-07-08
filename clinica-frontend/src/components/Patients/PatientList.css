@@ -1,0 +1,134 @@
+/* mi-clinica-app/clinica-frontend/src/components/Patients/PatientList.css */
+
+.patient-list-container {
+  padding: 30px; /* Más padding para mayor espacio interno */
+  background-color: #ffffff;
+  border-radius: 12px; /* Bordes más redondeados */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada y suave */
+  max-width: 1000px; /* Un poco más ancho */
+  margin: 30px auto; /* Más margen para separación */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente más moderna */
+}
+
+.patient-list-container h2 {
+  color: #2c3e50; /* Un color oscuro más suave */
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2em; /* Título más grande */
+  font-weight: 600; /* Un poco más de peso */
+}
+
+.patient-list-container .add-button {
+  background-color: #3498db; /* Un azul más vibrante */
+  color: white;
+  padding: 12px 25px; /* Más padding */
+  border: none;
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer;
+  font-size: 1.05em; /* Un poco más grande */
+  font-weight: 500;
+  margin-bottom: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Añadir transición para transform */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para el botón */
+}
+
+.patient-list-container .add-button:hover {
+  background-color: #2980b9; /* Azul más oscuro al pasar el ratón */
+  transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+.patient-list-container table {
+  width: 100%;
+  border-collapse: separate; /* Para permitir border-spacing y border-radius en celdas */
+  border-spacing: 0; /* Eliminar espacio entre celdas por defecto */
+  margin-top: 25px;
+  border-radius: 8px; /* Bordes redondeados para la tabla completa */
+  overflow: hidden; /* Asegura que los bordes redondeados se apliquen */
+}
+
+.patient-list-container th,
+.patient-list-container td {
+  border: 1px solid #e0e0e0; /* Un borde más suave */
+  padding: 15px; /* Más padding en celdas */
+  text-align: left;
+}
+
+.patient-list-container th {
+  background-color: #ecf0f1; /* Un gris muy claro para el encabezado */
+  font-weight: 600; /* Más peso para los encabezados */
+  color: #34495e; /* Un color de texto más oscuro para los encabezados */
+  text-transform: uppercase; /* Mayúsculas para los encabezados */
+  font-size: 0.9em;
+}
+
+/* Redondear las esquinas de los th de la cabecera */
+.patient-list-container th:first-child {
+  border-top-left-radius: 8px;
+}
+.patient-list-container th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.patient-list-container tr:nth-child(even) {
+  background-color: #f9fbfb; /* Ligeramente diferente para filas pares */
+}
+
+.patient-list-container tr:hover {
+  background-color: #e8f4f8; /* Un azul muy claro al pasar el ratón */
+  cursor: pointer; /* Indicar que las filas son interactivas, aunque no hagan nada por defecto */
+}
+
+.patient-list-container .btn-edit,
+.patient-list-container .btn-delete {
+  padding: 10px 18px; /* Más padding para los botones */
+  border: none;
+  border-radius: 6px; /* Bordes más suaves */
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-right: 8px; /* Más espacio entre botones */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.patient-list-container .btn-edit {
+  background-color: #f39c12; /* Naranja para editar */
+  color: white; /* Color de texto blanco para contraste */
+}
+
+.patient-list-container .btn-edit:hover {
+  background-color: #e67e22; /* Naranja más oscuro */
+  transform: translateY(-1px);
+}
+
+.patient-list-container .btn-delete {
+  background-color: #e74c3c; /* Rojo más suave para eliminar */
+  color: white;
+}
+
+.patient-list-container .btn-delete:hover {
+  background-color: #c0392b; /* Rojo más oscuro */
+  transform: translateY(-1px);
+}
+
+.error-message,
+.info-message {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.error-message {
+  color: #c0392b; /* Rojo más oscuro */
+  background-color: #fde8e7; /* Fondo rojo muy claro */
+  border: 1px solid #e74c3c; /* Borde rojo */
+}
+
+.info-message {
+  color: #2980b9; /* Azul más oscuro */
+  background-color: #e7f3f8; /* Fondo azul muy claro */
+  border: 1px solid #3498db; /* Borde azul */
+}

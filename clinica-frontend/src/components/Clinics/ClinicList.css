@@ -1,0 +1,232 @@
+/* mi-clinica-app/clinica-frontend/src/components/Clinics/ClinicList.css */
+
+.clinic-list-container {
+  padding: 30px 20px;
+  background-color: #fcfcfc; /* Fondo suave */
+  min-height: calc(100vh - 60px);
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #34495e;
+  max-width: 1200px; /* Ancho máximo para la tabla */
+  margin: 30px auto; /* Centrar y dar espacio */
+  border-radius: 12px; /* Bordes redondeados para el contenedor */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08); /* Sombra suave para el contenedor */
+}
+
+.clinic-list-container h2 {
+  color: #2c3e50;
+  margin-bottom: 35px; /* Espacio debajo del título */
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.add-clinic-button {
+  background-color: #28a745; /* Verde para añadir */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px; /* Ligeramente más redondeado para el botón */
+  cursor: pointer;
+  font-size: 1.05em;
+  font-weight: 500;
+  margin-bottom: 25px; /* Espacio debajo del botón */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: block; /* Para que ocupe su propia línea si es necesario */
+  margin-left: auto; /* Alinear a la derecha */
+  margin-right: auto; /* Alinear a la derecha, para centrarlo si es el único elemento */
+}
+/* Aseguramos que el botón se alinee a la izquierda cuando está solo o con otros elementos */
+.clinic-list-container > .add-clinic-button {
+  margin-left: 0; 
+  margin-right: 0;
+}
+
+
+.add-clinic-button:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* --- ESTILOS DE TABLA (SIMILARES A PATIENTLIST) --- */
+.clinic-list-container table {
+  width: 100%;
+  border-collapse: separate; /* Permite border-spacing y border-radius en celdas */
+  border-spacing: 0;
+  margin-top: 25px;
+  border-radius: 8px; /* Bordes redondeados para la tabla completa */
+  overflow: hidden; /* Asegura que los bordes redondeados se apliquen */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra suave para la tabla */
+}
+
+.clinic-list-container th,
+.clinic-list-container td {
+  border: 1px solid #e0e0e0; /* Borde más suave */
+  padding: 15px; /* Más padding en celdas */
+  text-align: left;
+}
+
+.clinic-list-container th {
+  background-color: #ecf0f1; /* Gris muy claro para el encabezado */
+  font-weight: 600;
+  color: #34495e; /* Texto más oscuro para encabezados */
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+/* Redondear las esquinas de los th de la cabecera */
+.clinic-list-container th:first-child {
+  border-top-left-radius: 8px;
+}
+.clinic-list-container th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.clinic-list-container tr:nth-child(even) {
+  background-color: #f9fbfb; /* Ligeramente diferente para filas pares */
+}
+
+.clinic-list-container tr:hover {
+  background-color: #e8f4f8; /* Azul muy claro al pasar el ratón */
+  cursor: pointer;
+}
+
+/* Estilos para los botones de acción dentro de la tabla */
+.clinic-list-container .btn-edit,
+.clinic-list-container .btn-delete {
+  padding: 10px 18px; /* Más padding para los botones */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-right: 8px; /* Espacio entre botones */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 500;
+}
+
+.clinic-list-container .btn-edit {
+  background-color: #f39c12; /* Naranja para editar */
+  color: white;
+}
+
+.clinic-list-container .btn-edit:hover {
+  background-color: #e67e22;
+  transform: translateY(-1px);
+}
+
+.clinic-list-container .btn-delete {
+  background-color: #e74c3c; /* Rojo suave para eliminar */
+  color: white;
+}
+
+.clinic-list-container .btn-delete:hover {
+  background-color: #c0392b;
+  transform: translateY(-1px);
+}
+/* --- FIN ESTILOS DE TABLA --- */
+
+/* Estilos para mensajes de estado y feedback */
+.success-message,
+.error-message,
+.info-message {
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.success-message {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.error-message {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.info-message {
+  color: #004085;
+  background-color: #cce5ff;
+  border: 1px solid #b8daff;
+}
+
+/* Estilos para los diferentes estados de la clínica (dentro de la celda de la tabla) */
+.status-active {
+  color: #28a745; /* Verde */
+  font-weight: bold;
+}
+
+.status-inactive {
+  color: #dc3545; /* Rojo */
+  font-weight: bold;
+}
+
+.status-pending {
+  color: #ffc107; /* Naranja */
+  font-weight: bold;
+}
+
+.status-suspended {
+  color: #6c757d; /* Gris */
+  font-weight: bold;
+}
+
+/* No-results message for ClinicList */
+.no-clinics-found {
+    text-align: center;
+    padding: 30px;
+    font-size: 1.2em;
+    color: #666;
+    background-color: #f0f4f7;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .clinic-list-container {
+    padding: 20px 10px;
+  }
+
+  .clinic-list-container h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+  }
+
+  .add-clinic-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  /* Para que la tabla sea desplazable horizontalmente en móviles */
+  .clinic-list-container table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap; /* Evita que el contenido de las celdas se envuelva */
+  }
+
+  .clinic-list-container th,
+  .clinic-list-container td {
+    padding: 12px;
+  }
+  
+  .clinic-list-container .btn-edit,
+  .clinic-list-container .btn-delete {
+    padding: 8px 12px;
+    font-size: 0.85em;
+  }
+}
